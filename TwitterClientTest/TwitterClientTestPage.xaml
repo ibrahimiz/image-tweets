@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TwitterClientTest" x:Class="TwitterClientTest.TwitterClientTestPage">
+ <StackLayout Orientation="Vertical">
+ <Label Text="#Burj Khalifa:Photos" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" />
+    <ListView x:Name="TiwterList" RowHeight="220">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical"  VerticalOptions="FillAndExpand" Padding="5,8,5,12">
+              <Label  Text="{Binding Tweet}" />
+				<Image Source="{Binding MediaUrl}" HeightRequest="150" WidthRequest="150"  />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
